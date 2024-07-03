@@ -22,7 +22,7 @@ namespace SysVendas2
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
 			base.OnConfiguring(optionsBuilder);
-			optionsBuilder.UseMySql("server=192.168.30.169;database=sysvendas_mdi;user=admin;password=senac123#", new MySqlServerVersion(new Version(8, 0, 37));
+			optionsBuilder.UseMySql("server=192.168.30.169;database=sysvendas_mdi;user=admin;password=senac123#", new MySqlServerVersion(new Version(8, 0, 37)));
 		}
 	}
 }
