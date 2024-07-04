@@ -26,8 +26,7 @@
 		///  Required method for Designer support - do not modify
 		///  the contents of this method with the code editor.
 		/// </summary>
-		private void InitializeComponent()
-		{
+		private void InitializeComponent() {
 			menuStrip1 = new MenuStrip();
 			cADASTROToolStripMenuItem = new ToolStripMenuItem();
 			cLIENTEToolStripMenuItem = new ToolStripMenuItem();
@@ -38,6 +37,7 @@
 			// 
 			// menuStrip1
 			// 
+			menuStrip1.BackColor = Color.WhiteSmoke;
 			menuStrip1.Items.AddRange(new ToolStripItem[] { cADASTROToolStripMenuItem, vENDASToolStripMenuItem });
 			menuStrip1.Location = new Point(0, 0);
 			menuStrip1.Name = "menuStrip1";
@@ -55,14 +55,14 @@
 			// cLIENTEToolStripMenuItem
 			// 
 			cLIENTEToolStripMenuItem.Name = "cLIENTEToolStripMenuItem";
-			cLIENTEToolStripMenuItem.Size = new Size(180, 22);
+			cLIENTEToolStripMenuItem.Size = new Size(133, 22);
 			cLIENTEToolStripMenuItem.Text = "CLIENTE";
 			cLIENTEToolStripMenuItem.Click += cLIENTEToolStripMenuItem_Click_1;
 			// 
 			// pRODUTOSToolStripMenuItem
 			// 
 			pRODUTOSToolStripMenuItem.Name = "pRODUTOSToolStripMenuItem";
-			pRODUTOSToolStripMenuItem.Size = new Size(180, 22);
+			pRODUTOSToolStripMenuItem.Size = new Size(133, 22);
 			pRODUTOSToolStripMenuItem.Text = "PRODUTOS";
 			// 
 			// vENDASToolStripMenuItem
@@ -75,8 +75,14 @@
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
+			BackColor = SystemColors.ButtonHighlight;
+			BackgroundImage = Properties.Resources.Mestres_png_2_;
+			BackgroundImageLayout = ImageLayout.Stretch;
 			ClientSize = new Size(800, 450);
 			Controls.Add(menuStrip1);
+			Cursor = Cursors.Default;
+			DoubleBuffered = true;
+			ForeColor = SystemColors.ControlDarkDark;
 			MainMenuStrip = menuStrip1;
 			Name = "Form_Principal2";
 			Text = "Form1";

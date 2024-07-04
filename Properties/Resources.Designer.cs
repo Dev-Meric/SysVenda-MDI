@@ -59,5 +59,15 @@ namespace SysVenda_MDI.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Mestres_png_2_ {
+            get {
+                object obj = ResourceManager.GetObject("Mestres.png(2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
