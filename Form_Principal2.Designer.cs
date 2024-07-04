@@ -55,14 +55,14 @@
 			// cLIENTEToolStripMenuItem
 			// 
 			cLIENTEToolStripMenuItem.Name = "cLIENTEToolStripMenuItem";
-			cLIENTEToolStripMenuItem.Size = new Size(180, 22);
+			cLIENTEToolStripMenuItem.Size = new Size(133, 22);
 			cLIENTEToolStripMenuItem.Text = "CLIENTE";
 			cLIENTEToolStripMenuItem.Click += cLIENTEToolStripMenuItem_Click_1;
 			// 
 			// pRODUTOSToolStripMenuItem
 			// 
 			pRODUTOSToolStripMenuItem.Name = "pRODUTOSToolStripMenuItem";
-			pRODUTOSToolStripMenuItem.Size = new Size(180, 22);
+			pRODUTOSToolStripMenuItem.Size = new Size(133, 22);
 			pRODUTOSToolStripMenuItem.Text = "PRODUTOS";
 			// 
 			// vENDASToolStripMenuItem
@@ -80,6 +80,7 @@
 			MainMenuStrip = menuStrip1;
 			Name = "Form_Principal2";
 			Text = "Form1";
+			Load += Form_Principal2_Load;
 			menuStrip1.ResumeLayout(false);
 			menuStrip1.PerformLayout();
 			ResumeLayout(false);

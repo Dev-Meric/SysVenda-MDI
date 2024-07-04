@@ -16,5 +16,10 @@ namespace SysVenda_MDI
 		{
 			InitializeComponent();
 		}
+
+		private void Form_Vendas_Load(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

@@ -23,12 +23,14 @@ namespace SysVenda_MDI
 		List<Cliente> clientes;
 
 		private Contexto contexto;
-		public Form_Clientes2(){
+		public Form_Clientes2()
+		{
 			InitializeComponent();
 
 			clientes = new List<Cliente>();
 
-			using(var clientesCxt = new Contexto()){
+			using (var clientesCxt = new Contexto())
+			{
 				clientes = clientesCxt.Clientes.ToList();
 			}
 
@@ -41,7 +43,7 @@ namespace SysVenda_MDI
 		{
 			DateTime dataNascimento;
 			DateTime.TryParseExact(Txt_NASCIMENTO.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out dataNascimento);
-			
+
 			//Criar um novo cliente com os dados do formulário
 			Cliente novocliente = new Cliente()
 			{
@@ -83,8 +85,10 @@ namespace SysVenda_MDI
 
 		}
 
-		private void Btn_ATUALIZAR_Click(object sender, EventArgs e){
-			if (estadoUsuario == 2){
+		private void Btn_ATUALIZAR_Click(object sender, EventArgs e)
+		{
+			if (estadoUsuario == 2)
+			{
 				using (var contexto = new Contexto())
 				{
 					var clienteRegistrado = contexto.Clientes.FirstOrDefault(c => c.ClienteID == clienteID);
@@ -109,7 +113,9 @@ namespace SysVenda_MDI
 
 				estadoUsuario = 1;
 
-			}else{
+			}
+			else
+			{
 				if (DGV_ListaClientes.SelectedRows.Count > 0)
 				{
 					Cliente clientesSelected = DGV_ListaClientes.SelectedRows[0].DataBoundItem as Cliente;
@@ -130,7 +136,8 @@ namespace SysVenda_MDI
 
 		}
 
-		private void Btn_EXCLUIR_Click(object sender, EventArgs e){
+		private void Btn_EXCLUIR_Click(object sender, EventArgs e)
+		{
 			if (DGV_ListaClientes.SelectedRows.Count > 0)
 			{
 				Cliente clientesSelected = DGV_ListaClientes.SelectedRows[0].DataBoundItem as Cliente;
@@ -151,17 +158,28 @@ namespace SysVenda_MDI
 			}
 		}
 
-		private void Txt_CEP_Click(object sender, EventArgs e){
-			//string cep = ButtonClick.Text;
-			//ClienteAPI cliente = new ClienteAPI();
+		private void Txt_CEP_Click(object sender, EventArgs e)
+		{
+			string cep = ButtonClick.Text;
+			ClienteAPI cliente = new ClienteAPI();
 
-			//Endereco resp = cliente.GetEndereco("68743570");
+			Endereco resp = cliente.GetEndereco("68743570");
 
 			//Chamar a função clienteAPI.GetEndereco(cep)
-			//Txt_ENDERECO.Text = resp.logradouro + ", " + resp.localidade + "/" + resp.uf;
+			Txt_ENDERECO.Text = resp.logradouro + ", " + resp.localidade + "/" + resp.uf;
 		}
 
 		private void Txt_ENDERECO_TextChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void Txt_NOME_CLIENTES_TextChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void Form_Clientes2_Load(object sender, EventArgs e)
 		{
 
 		}

@@ -16,5 +16,10 @@ namespace SysVenda_MDI
 		{
 
 		}
+
+		private void Form_Principal2_Load(object sender, EventArgs e)
+		{
+
+		}
 	}
 }
