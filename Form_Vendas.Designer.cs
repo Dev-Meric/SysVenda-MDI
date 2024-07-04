@@ -1,6 +1,6 @@
 ﻿namespace SysVenda_MDI
 {
-	partial class Form_Vendas2
+	partial class Form_Vendas
 	{
 		/// <summary>
 		/// Required designer variable.

@@ -28,285 +28,274 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			label1 = new Label();
-			label2 = new Label();
-			label3 = new Label();
-			label4 = new Label();
-			label5 = new Label();
-			label6 = new Label();
-			label7 = new Label();
-			Txt_NOME_CLIENTES = new TextBox();
-			Txt_CPF = new TextBox();
-			Txt_RG = new TextBox();
-			Txt_NASCIMENTO = new TextBox();
-			Txt_ENDERECO = new TextBox();
-			Txt_CEP = new TextBox();
-			Txt_FONE = new TextBox();
-			Txt_EMAIL = new TextBox();
-			DGV_ListaClientes = new DataGridView();
-			ButtonClick = new Button();
-			Btn_INSERIR = new Button();
-			button2 = new Button();
-			button3 = new Button();
-			((System.ComponentModel.ISupportInitialize)DGV_ListaClientes).BeginInit();
-			SuspendLayout();
-			// 
-			// label1
-			// 
-			label1.AutoSize = true;
-			label1.Location = new Point(46, 18);
-			label1.Name = "label1";
-			label1.Size = new Size(45, 13);
-			label1.TabIndex = 0;
-			label1.Text = "NOME :";
-			label1.Click += label1_Click;
-			// 
-			// label2
-			// 
-			label2.AutoSize = true;
-			label2.Location = new Point(46, 55);
-			label2.Name = "label2";
-			label2.Size = new Size(33, 13);
-			label2.TabIndex = 1;
-			label2.Text = "CPF :";
-			// 
-			// label3
-			// 
-			label3.AutoSize = true;
-			label3.Location = new Point(228, 55);
-			label3.Name = "label3";
-			label3.Size = new Size(29, 13);
-			label3.TabIndex = 2;
-			label3.Text = "RG :";
-			// 
-			// label4
-			// 
-			label4.AutoSize = true;
-			label4.Location = new Point(417, 55);
-			label4.Name = "label4";
-			label4.Size = new Size(81, 13);
-			label4.TabIndex = 3;
-			label4.Text = "NASCIMENTO:";
-			// 
-			// label5
-			// 
-			label5.AutoSize = true;
-			label5.Location = new Point(46, 90);
-			label5.Name = "label5";
-			label5.Size = new Size(73, 13);
-			label5.TabIndex = 4;
-			label5.Text = "ENDEREÇO :";
-			// 
-			// label6
-			// 
-			label6.AutoSize = true;
-			label6.Location = new Point(46, 133);
-			label6.Name = "label6";
-			label6.Size = new Size(42, 13);
-			label6.TabIndex = 5;
-			label6.Text = "FONE :";
-			// 
-			// label7
-			// 
-			label7.AutoSize = true;
-			label7.Location = new Point(279, 133);
-			label7.Name = "label7";
-			label7.Size = new Size(45, 13);
-			label7.TabIndex = 6;
-			label7.Text = "EMAIL :";
+			this.Txt_NOME_CLIENTES = new System.Windows.Forms.TextBox();
+			this.label2 = new System.Windows.Forms.Label();
+			this.Txt_CPF = new System.Windows.Forms.TextBox();
+			this.label3 = new System.Windows.Forms.Label();
+			this.Txt_RG = new System.Windows.Forms.TextBox();
+			this.label4 = new System.Windows.Forms.Label();
+			this.Txt_NASCIMENTO = new System.Windows.Forms.TextBox();
+			this.label5 = new System.Windows.Forms.Label();
+			this.Txt_ENDERECO = new System.Windows.Forms.TextBox();
+			this.label6 = new System.Windows.Forms.Label();
+			this.Txt_FONE = new System.Windows.Forms.TextBox();
+			this.label7 = new System.Windows.Forms.Label();
+			this.Txt_EMAIL = new System.Windows.Forms.TextBox();
+			this.label8 = new System.Windows.Forms.Label();
+			this.Btn_INSERIR = new System.Windows.Forms.Button();
+			this.Btn_Ataualizar = new System.Windows.Forms.Button();
+			this.Btn_Excluir = new System.Windows.Forms.Button();
+			this.DGV_ListaClientes = new System.Windows.Forms.DataGridView();
+			this.ButtonClick = new System.Windows.Forms.Button();
+			this.Txt_CEP = new System.Windows.Forms.TextBox();
+			((System.ComponentModel.ISupportInitialize)(this.DGV_ListaClientes)).BeginInit();
+			this.SuspendLayout();
 			// 
 			// Txt_NOME_CLIENTES
 			// 
-			Txt_NOME_CLIENTES.BackColor = SystemColors.Window;
-			Txt_NOME_CLIENTES.Cursor = Cursors.IBeam;
-			Txt_NOME_CLIENTES.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Txt_NOME_CLIENTES.ImeMode = ImeMode.NoControl;
-			Txt_NOME_CLIENTES.Location = new Point(95, 18);
-			Txt_NOME_CLIENTES.Name = "Txt_NOME_CLIENTES";
-			Txt_NOME_CLIENTES.Size = new Size(541, 20);
-			Txt_NOME_CLIENTES.TabIndex = 1;
-			Txt_NOME_CLIENTES.TextChanged += textBox1_TextChanged;
+			this.Txt_NOME_CLIENTES.Location = new System.Drawing.Point(111, 21);
+			this.Txt_NOME_CLIENTES.Name = "Txt_NOME_CLIENTES";
+			this.Txt_NOME_CLIENTES.Size = new System.Drawing.Size(630, 20);
+			this.Txt_NOME_CLIENTES.TabIndex = 1;
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.BackColor = System.Drawing.SystemColors.Control;
+			this.label2.Location = new System.Drawing.Point(63, 24);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(38, 13);
+			this.label2.TabIndex = 60;
+			this.label2.Text = "Nome:";
 			// 
 			// Txt_CPF
 			// 
-			Txt_CPF.Cursor = Cursors.IBeam;
-			Txt_CPF.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Txt_CPF.ImeMode = ImeMode.NoControl;
-			Txt_CPF.Location = new Point(95, 54);
-			Txt_CPF.Name = "Txt_CPF";
-			Txt_CPF.Size = new Size(86, 20);
-			Txt_CPF.TabIndex = 2;
+			this.Txt_CPF.Location = new System.Drawing.Point(111, 62);
+			this.Txt_CPF.Name = "Txt_CPF";
+			this.Txt_CPF.Size = new System.Drawing.Size(100, 20);
+			this.Txt_CPF.TabIndex = 2;
+			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.BackColor = System.Drawing.SystemColors.Control;
+			this.label3.Location = new System.Drawing.Point(62, 65);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(30, 13);
+			this.label3.TabIndex = 61;
+			this.label3.Text = "CPF:";
 			// 
 			// Txt_RG
 			// 
-			Txt_RG.Cursor = Cursors.IBeam;
-			Txt_RG.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Txt_RG.ImeMode = ImeMode.NoControl;
-			Txt_RG.Location = new Point(283, 54);
-			Txt_RG.Name = "Txt_RG";
-			Txt_RG.Size = new Size(110, 20);
-			Txt_RG.TabIndex = 3;
+			this.Txt_RG.Location = new System.Drawing.Point(330, 62);
+			this.Txt_RG.Name = "Txt_RG";
+			this.Txt_RG.Size = new System.Drawing.Size(128, 20);
+			this.Txt_RG.TabIndex = 3;
+			// 
+			// label4
+			// 
+			this.label4.AutoSize = true;
+			this.label4.BackColor = System.Drawing.SystemColors.Control;
+			this.label4.Location = new System.Drawing.Point(272, 65);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(26, 13);
+			this.label4.TabIndex = 62;
+			this.label4.Text = "RG:";
+			this.label4.Click += new System.EventHandler(this.label4_Click);
 			// 
 			// Txt_NASCIMENTO
 			// 
-			Txt_NASCIMENTO.Cursor = Cursors.IBeam;
-			Txt_NASCIMENTO.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Txt_NASCIMENTO.Location = new Point(497, 54);
-			Txt_NASCIMENTO.Name = "Txt_NASCIMENTO";
-			Txt_NASCIMENTO.Size = new Size(139, 20);
-			Txt_NASCIMENTO.TabIndex = 4;
+			this.Txt_NASCIMENTO.Location = new System.Drawing.Point(580, 62);
+			this.Txt_NASCIMENTO.Name = "Txt_NASCIMENTO";
+			this.Txt_NASCIMENTO.Size = new System.Drawing.Size(161, 20);
+			this.Txt_NASCIMENTO.TabIndex = 4;
+			// 
+			// label5
+			// 
+			this.label5.AutoSize = true;
+			this.label5.BackColor = System.Drawing.SystemColors.Control;
+			this.label5.Location = new System.Drawing.Point(481, 65);
+			this.label5.Name = "label5";
+			this.label5.Size = new System.Drawing.Size(81, 13);
+			this.label5.TabIndex = 63;
+			this.label5.Text = "NASCIMENTO:";
 			// 
 			// Txt_ENDERECO
 			// 
-			Txt_ENDERECO.Cursor = Cursors.IBeam;
-			Txt_ENDERECO.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Txt_ENDERECO.Location = new Point(118, 88);
-			Txt_ENDERECO.Name = "Txt_ENDERECO";
-			Txt_ENDERECO.Size = new Size(263, 20);
-			Txt_ENDERECO.TabIndex = 5;
+			this.Txt_ENDERECO.Location = new System.Drawing.Point(138, 102);
+			this.Txt_ENDERECO.Name = "Txt_ENDERECO";
+			this.Txt_ENDERECO.Size = new System.Drawing.Size(306, 20);
+			this.Txt_ENDERECO.TabIndex = 5;
+			this.Txt_ENDERECO.TextChanged += new System.EventHandler(this.Txt_ENDERECO_TextChanged);
 			// 
-			// Txt_CEP
+			// label6
 			// 
-			Txt_CEP.Cursor = Cursors.IBeam;
-			Txt_CEP.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Txt_CEP.Location = new Point(409, 88);
-			Txt_CEP.Name = "Txt_CEP";
-			Txt_CEP.Size = new Size(123, 20);
-			Txt_CEP.TabIndex = 66;
+			this.label6.AutoSize = true;
+			this.label6.BackColor = System.Drawing.SystemColors.Control;
+			this.label6.Location = new System.Drawing.Point(62, 105);
+			this.label6.Name = "label6";
+			this.label6.Size = new System.Drawing.Size(70, 13);
+			this.label6.TabIndex = 64;
+			this.label6.Text = "ENDEREÇO:";
 			// 
 			// Txt_FONE
 			// 
-			Txt_FONE.Cursor = Cursors.IBeam;
-			Txt_FONE.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Txt_FONE.Location = new Point(92, 131);
-			Txt_FONE.Name = "Txt_FONE";
-			Txt_FONE.Size = new Size(146, 20);
-			Txt_FONE.TabIndex = 6;
+			this.Txt_FONE.Location = new System.Drawing.Point(107, 151);
+			this.Txt_FONE.Name = "Txt_FONE";
+			this.Txt_FONE.Size = new System.Drawing.Size(170, 20);
+			this.Txt_FONE.TabIndex = 6;
+			// 
+			// label7
+			// 
+			this.label7.AutoSize = true;
+			this.label7.BackColor = System.Drawing.SystemColors.Control;
+			this.label7.Location = new System.Drawing.Point(62, 154);
+			this.label7.Name = "label7";
+			this.label7.Size = new System.Drawing.Size(39, 13);
+			this.label7.TabIndex = 12;
+			this.label7.Text = "FONE:";
 			// 
 			// Txt_EMAIL
 			// 
-			Txt_EMAIL.Cursor = Cursors.IBeam;
-			Txt_EMAIL.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Txt_EMAIL.Location = new Point(324, 131);
-			Txt_EMAIL.Name = "Txt_EMAIL";
-			Txt_EMAIL.Size = new Size(312, 20);
-			Txt_EMAIL.TabIndex = 7;
+			this.Txt_EMAIL.Location = new System.Drawing.Point(378, 151);
+			this.Txt_EMAIL.Name = "Txt_EMAIL";
+			this.Txt_EMAIL.Size = new System.Drawing.Size(363, 20);
+			this.Txt_EMAIL.TabIndex = 7;
 			// 
-			// DGV_ListaClientes
+			// label8
 			// 
-			DGV_ListaClientes.BackgroundColor = SystemColors.ActiveCaption;
-			DGV_ListaClientes.BorderStyle = BorderStyle.Fixed3D;
-			DGV_ListaClientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			DGV_ListaClientes.EditMode = DataGridViewEditMode.EditProgrammatically;
-			DGV_ListaClientes.GridColor = SystemColors.InactiveCaptionText;
-			DGV_ListaClientes.ImeMode = ImeMode.NoControl;
-			DGV_ListaClientes.Location = new Point(56, 166);
-			DGV_ListaClientes.Name = "DGV_ListaClientes";
-			DGV_ListaClientes.ReadOnly = true;
-			DGV_ListaClientes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-			DGV_ListaClientes.Size = new Size(579, 150);
-			DGV_ListaClientes.TabIndex = 8;
-			// 
-			// ButtonClick
-			// 
-			ButtonClick.BackColor = SystemColors.ActiveCaptionText;
-			ButtonClick.ForeColor = SystemColors.ControlLightLight;
-			ButtonClick.Location = new Point(538, 81);
-			ButtonClick.Name = "ButtonClick";
-			ButtonClick.Size = new Size(98, 32);
-			ButtonClick.TabIndex = 65;
-			ButtonClick.Text = "Buscar";
-			ButtonClick.UseVisualStyleBackColor = false;
+			this.label8.AutoSize = true;
+			this.label8.BackColor = System.Drawing.SystemColors.Control;
+			this.label8.Location = new System.Drawing.Point(327, 154);
+			this.label8.Name = "label8";
+			this.label8.Size = new System.Drawing.Size(45, 13);
+			this.label8.TabIndex = 14;
+			this.label8.Text = "E-MAIL:";
 			// 
 			// Btn_INSERIR
 			// 
-			Btn_INSERIR.BackColor = SystemColors.ActiveCaptionText;
-			Btn_INSERIR.ForeColor = SystemColors.HighlightText;
-			Btn_INSERIR.Location = new Point(46, 330);
-			Btn_INSERIR.Name = "Btn_INSERIR";
-			Btn_INSERIR.Size = new Size(87, 36);
-			Btn_INSERIR.TabIndex = 17;
-			Btn_INSERIR.Text = "INSERIR";
-			Btn_INSERIR.UseVisualStyleBackColor = false;
+			this.Btn_INSERIR.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+			this.Btn_INSERIR.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+			this.Btn_INSERIR.Location = new System.Drawing.Point(394, 379);
+			this.Btn_INSERIR.Name = "Btn_INSERIR";
+			this.Btn_INSERIR.Size = new System.Drawing.Size(110, 41);
+			this.Btn_INSERIR.TabIndex = 9;
+			this.Btn_INSERIR.Text = "INSERIR";
+			this.Btn_INSERIR.UseVisualStyleBackColor = false;
+			this.Btn_INSERIR.Click += new System.EventHandler(this.Btn_INSERIR_Click);
 			// 
-			// button2
+			// Btn_Ataualizar
 			// 
-			button2.BackColor = SystemColors.ActiveCaptionText;
-			button2.ForeColor = SystemColors.HighlightText;
-			button2.Location = new Point(551, 330);
-			button2.Name = "button2";
-			button2.Size = new Size(81, 36);
-			button2.TabIndex = 18;
-			button2.Text = "EXCLUIR";
-			button2.UseVisualStyleBackColor = false;
+			this.Btn_Ataualizar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+			this.Btn_Ataualizar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+			this.Btn_Ataualizar.Location = new System.Drawing.Point(517, 379);
+			this.Btn_Ataualizar.Name = "Btn_Ataualizar";
+			this.Btn_Ataualizar.Size = new System.Drawing.Size(110, 41);
+			this.Btn_Ataualizar.TabIndex = 10;
+			this.Btn_Ataualizar.Text = "ATAULIZAR";
+			this.Btn_Ataualizar.UseVisualStyleBackColor = false;
+			this.Btn_Ataualizar.Click += new System.EventHandler(this.Btn_ATUALIZAR_Click);
 			// 
-			// button3
+			// Btn_Excluir
 			// 
-			button3.BackColor = SystemColors.ActiveCaptionText;
-			button3.ForeColor = SystemColors.HighlightText;
-			button3.Location = new Point(161, 330);
-			button3.Name = "button3";
-			button3.Size = new Size(81, 36);
-			button3.TabIndex = 19;
-			button3.Text = "ATUALIZAR";
-			button3.UseVisualStyleBackColor = false;
+			this.Btn_Excluir.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+			this.Btn_Excluir.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+			this.Btn_Excluir.Location = new System.Drawing.Point(642, 379);
+			this.Btn_Excluir.Name = "Btn_Excluir";
+			this.Btn_Excluir.Size = new System.Drawing.Size(110, 41);
+			this.Btn_Excluir.TabIndex = 11;
+			this.Btn_Excluir.Text = "EXCLUIR";
+			this.Btn_Excluir.UseVisualStyleBackColor = false;
+			this.Btn_Excluir.Click += new System.EventHandler(this.Btn_EXCLUIR_Click);
+			// 
+			// DGV_ListaClientes
+			// 
+			this.DGV_ListaClientes.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+			this.DGV_ListaClientes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.DGV_ListaClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.DGV_ListaClientes.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+			this.DGV_ListaClientes.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
+			this.DGV_ListaClientes.Location = new System.Drawing.Point(65, 191);
+			this.DGV_ListaClientes.Name = "DGV_ListaClientes";
+			this.DGV_ListaClientes.ReadOnly = true;
+			this.DGV_ListaClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+			this.DGV_ListaClientes.Size = new System.Drawing.Size(676, 173);
+			this.DGV_ListaClientes.TabIndex = 8;
+			// 
+			// ButtonClick
+			// 
+			this.ButtonClick.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+			this.ButtonClick.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+			this.ButtonClick.Location = new System.Drawing.Point(626, 95);
+			this.ButtonClick.Name = "ButtonClick";
+			this.ButtonClick.Size = new System.Drawing.Size(115, 32);
+			this.ButtonClick.TabIndex = 65;
+			this.ButtonClick.Text = "Buscar";
+			this.ButtonClick.UseVisualStyleBackColor = false;
+			this.ButtonClick.Click += new System.EventHandler(this.Txt_CEP_Click);
+			// 
+			// Txt_CEP
+			// 
+			this.Txt_CEP.Location = new System.Drawing.Point(477, 102);
+			this.Txt_CEP.Name = "Txt_CEP";
+			this.Txt_CEP.Size = new System.Drawing.Size(143, 20);
+			this.Txt_CEP.TabIndex = 66;
 			// 
 			// Form_Clientes2
 			// 
-			AutoScaleDimensions = new SizeF(6F, 13F);
-			AutoScaleMode = AutoScaleMode.Font;
-			BackColor = SystemColors.ButtonFace;
-			ClientSize = new Size(800, 404);
-			Controls.Add(button3);
-			Controls.Add(button2);
-			Controls.Add(Btn_INSERIR);
-			Controls.Add(ButtonClick);
-			Controls.Add(DGV_ListaClientes);
-			Controls.Add(Txt_EMAIL);
-			Controls.Add(Txt_FONE);
-			Controls.Add(Txt_CEP);
-			Controls.Add(Txt_ENDERECO);
-			Controls.Add(Txt_NASCIMENTO);
-			Controls.Add(Txt_RG);
-			Controls.Add(Txt_CPF);
-			Controls.Add(Txt_NOME_CLIENTES);
-			Controls.Add(label7);
-			Controls.Add(label6);
-			Controls.Add(label5);
-			Controls.Add(label4);
-			Controls.Add(label3);
-			Controls.Add(label2);
-			Controls.Add(label1);
-			Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-			FormBorderStyle = FormBorderStyle.FixedDialog;
-			Name = "Form_Clientes2";
-			Text = "Cadastros de Clientes";
-			((System.ComponentModel.ISupportInitialize)DGV_ListaClientes).EndInit();
-			ResumeLayout(false);
-			PerformLayout();
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.SystemColors.ButtonFace;
+			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.Controls.Add(this.Txt_CEP);
+			this.Controls.Add(this.ButtonClick);
+			this.Controls.Add(this.DGV_ListaClientes);
+			this.Controls.Add(this.Btn_Excluir);
+			this.Controls.Add(this.Btn_Ataualizar);
+			this.Controls.Add(this.Btn_INSERIR);
+			this.Controls.Add(this.Txt_EMAIL);
+			this.Controls.Add(this.label8);
+			this.Controls.Add(this.Txt_FONE);
+			this.Controls.Add(this.label7);
+			this.Controls.Add(this.Txt_ENDERECO);
+			this.Controls.Add(this.label6);
+			this.Controls.Add(this.Txt_NASCIMENTO);
+			this.Controls.Add(this.label5);
+			this.Controls.Add(this.Txt_RG);
+			this.Controls.Add(this.label4);
+			this.Controls.Add(this.Txt_CPF);
+			this.Controls.Add(this.label3);
+			this.Controls.Add(this.Txt_NOME_CLIENTES);
+			this.Controls.Add(this.label2);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+			this.Name = "Form_Clientes2";
+			this.Text = "Cadastros de Clientes";
+			((System.ComponentModel.ISupportInitialize)(this.DGV_ListaClientes)).EndInit();
+			this.ResumeLayout(false);
+			this.PerformLayout();
+
 		}
 
 		#endregion
-
-		private Label label1;
-		private Label label2;
-		private Label label3;
-		private Label label4;
-		private Label label5;
-		private Label label6;
-		private Label label7;
-		private TextBox Txt_NOME_CLIENTES;
-		private TextBox Txt_CPF;
-		private TextBox Txt_RG;
-		private TextBox Txt_NASCIMENTO;
-		private TextBox Txt_ENDERECO;
-		private TextBox Txt_CEP;
-		private TextBox Txt_FONE;
-		private TextBox Txt_EMAIL;
-		private DataGridView DGV_ListaClientes;
-		private Button ButtonClick;
-		private Button Btn_INSERIR;
-		private Button button2;
-		private Button button3;
+		private System.Windows.Forms.TextBox Txt_NOME_CLIENTES;
+		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.TextBox Txt_CPF;
+		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.TextBox Txt_RG;
+		private System.Windows.Forms.Label label4;
+		private System.Windows.Forms.TextBox Txt_NASCIMENTO;
+		private System.Windows.Forms.Label label5;
+		private System.Windows.Forms.TextBox Txt_ENDERECO;
+		private System.Windows.Forms.Label label6;
+		private System.Windows.Forms.TextBox Txt_FONE;
+		private System.Windows.Forms.Label label7;
+		private System.Windows.Forms.TextBox Txt_EMAIL;
+		private System.Windows.Forms.Label label8;
+		private System.Windows.Forms.Button Btn_INSERIR;
+		private System.Windows.Forms.Button Btn_Ataualizar;
+		private System.Windows.Forms.Button Btn_Excluir;
+		private System.Windows.Forms.DataGridView DGV_ListaClientes;
+		private System.Windows.Forms.Button ButtonClick;
+		private System.Windows.Forms.TextBox Txt_CEP;
 	}
 }

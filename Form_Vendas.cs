@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SysVenda_MDI
 {
-	public partial class Form_Vendas2 : Form
+	public partial class Form_Vendas : Form
 	{
-		public Form_Vendas2()
+		public Form_Vendas()
 		{
 			InitializeComponent();
 		}

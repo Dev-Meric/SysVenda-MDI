@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SysVendas2.Entidades
+namespace SysVenda_MDI.Entidades
 {
 	internal class Venda
 	{

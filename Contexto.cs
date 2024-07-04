@@ -7,9 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SysVenda_MDI.Entidades;
-using SysVendas2.Entidades;
 
-namespace SysVendas2
+namespace SysVenda_MDI
 {
 	internal class Contexto : DbContext
 	{
