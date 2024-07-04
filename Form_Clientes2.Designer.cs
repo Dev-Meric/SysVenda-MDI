@@ -35,28 +35,28 @@
 			label5 = new Label();
 			label6 = new Label();
 			label7 = new Label();
-			textBox1 = new TextBox();
-			textBox2 = new TextBox();
-			textBox3 = new TextBox();
-			textBox4 = new TextBox();
-			textBox5 = new TextBox();
-			textBox6 = new TextBox();
-			textBox7 = new TextBox();
-			textBox8 = new TextBox();
-			dataGridView1 = new DataGridView();
+			Txt_NOME_CLIENTES = new TextBox();
+			Txt_CPF = new TextBox();
+			Txt_RG = new TextBox();
+			Txt_NASCIMENTO = new TextBox();
+			Txt_ENDERECO = new TextBox();
+			Txt_CEP = new TextBox();
+			Txt_FONE = new TextBox();
+			Txt_EMAIL = new TextBox();
+			DGV_ListaClientes = new DataGridView();
 			ButtonClick = new Button();
-			button1 = new Button();
+			Btn_INSERIR = new Button();
 			button2 = new Button();
 			button3 = new Button();
-			((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+			((System.ComponentModel.ISupportInitialize)DGV_ListaClientes).BeginInit();
 			SuspendLayout();
 			// 
 			// label1
 			// 
 			label1.AutoSize = true;
-			label1.Location = new Point(54, 28);
+			label1.Location = new Point(46, 18);
 			label1.Name = "label1";
-			label1.Size = new Size(48, 15);
+			label1.Size = new Size(45, 13);
 			label1.TabIndex = 0;
 			label1.Text = "NOME :";
 			label1.Click += label1_Click;
@@ -64,151 +64,178 @@
 			// label2
 			// 
 			label2.AutoSize = true;
-			label2.Location = new Point(54, 76);
+			label2.Location = new Point(46, 55);
 			label2.Name = "label2";
-			label2.Size = new Size(34, 15);
+			label2.Size = new Size(33, 13);
 			label2.TabIndex = 1;
 			label2.Text = "CPF :";
 			// 
 			// label3
 			// 
 			label3.AutoSize = true;
-			label3.Location = new Point(303, 76);
+			label3.Location = new Point(228, 55);
 			label3.Name = "label3";
-			label3.Size = new Size(28, 15);
+			label3.Size = new Size(29, 13);
 			label3.TabIndex = 2;
 			label3.Text = "RG :";
 			// 
 			// label4
 			// 
 			label4.AutoSize = true;
-			label4.Location = new Point(499, 76);
+			label4.Location = new Point(417, 55);
 			label4.Name = "label4";
-			label4.Size = new Size(84, 15);
+			label4.Size = new Size(81, 13);
 			label4.TabIndex = 3;
 			label4.Text = "NASCIMENTO:";
 			// 
 			// label5
 			// 
 			label5.AutoSize = true;
-			label5.Location = new Point(54, 127);
+			label5.Location = new Point(46, 90);
 			label5.Name = "label5";
-			label5.Size = new Size(72, 15);
+			label5.Size = new Size(73, 13);
 			label5.TabIndex = 4;
 			label5.Text = "ENDEREÇO :";
 			// 
 			// label6
 			// 
 			label6.AutoSize = true;
-			label6.Location = new Point(54, 183);
+			label6.Location = new Point(46, 133);
 			label6.Name = "label6";
-			label6.Size = new Size(43, 15);
+			label6.Size = new Size(42, 13);
 			label6.TabIndex = 5;
 			label6.Text = "FONE :";
 			// 
 			// label7
 			// 
 			label7.AutoSize = true;
-			label7.Location = new Point(303, 183);
+			label7.Location = new Point(279, 133);
 			label7.Name = "label7";
-			label7.Size = new Size(47, 15);
+			label7.Size = new Size(45, 13);
 			label7.TabIndex = 6;
 			label7.Text = "EMAIL :";
 			// 
-			// textBox1
+			// Txt_NOME_CLIENTES
 			// 
-			textBox1.Location = new Point(119, 25);
-			textBox1.Name = "textBox1";
-			textBox1.Size = new Size(616, 23);
-			textBox1.TabIndex = 7;
+			Txt_NOME_CLIENTES.BackColor = SystemColors.Window;
+			Txt_NOME_CLIENTES.Cursor = Cursors.IBeam;
+			Txt_NOME_CLIENTES.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+			Txt_NOME_CLIENTES.ImeMode = ImeMode.NoControl;
+			Txt_NOME_CLIENTES.Location = new Point(95, 18);
+			Txt_NOME_CLIENTES.Name = "Txt_NOME_CLIENTES";
+			Txt_NOME_CLIENTES.Size = new Size(541, 20);
+			Txt_NOME_CLIENTES.TabIndex = 1;
+			Txt_NOME_CLIENTES.TextChanged += textBox1_TextChanged;
 			// 
-			// textBox2
+			// Txt_CPF
 			// 
-			textBox2.Location = new Point(119, 73);
-			textBox2.Name = "textBox2";
-			textBox2.Size = new Size(163, 23);
-			textBox2.TabIndex = 8;
+			Txt_CPF.Cursor = Cursors.IBeam;
+			Txt_CPF.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+			Txt_CPF.ImeMode = ImeMode.NoControl;
+			Txt_CPF.Location = new Point(95, 54);
+			Txt_CPF.Name = "Txt_CPF";
+			Txt_CPF.Size = new Size(86, 20);
+			Txt_CPF.TabIndex = 2;
 			// 
-			// textBox3
+			// Txt_RG
 			// 
-			textBox3.Location = new Point(336, 73);
-			textBox3.Name = "textBox3";
-			textBox3.Size = new Size(132, 23);
-			textBox3.TabIndex = 9;
+			Txt_RG.Cursor = Cursors.IBeam;
+			Txt_RG.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+			Txt_RG.ImeMode = ImeMode.NoControl;
+			Txt_RG.Location = new Point(283, 54);
+			Txt_RG.Name = "Txt_RG";
+			Txt_RG.Size = new Size(110, 20);
+			Txt_RG.TabIndex = 3;
 			// 
-			// textBox4
+			// Txt_NASCIMENTO
 			// 
-			textBox4.Location = new Point(588, 73);
-			textBox4.Name = "textBox4";
-			textBox4.Size = new Size(147, 23);
-			textBox4.TabIndex = 10;
+			Txt_NASCIMENTO.Cursor = Cursors.IBeam;
+			Txt_NASCIMENTO.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+			Txt_NASCIMENTO.Location = new Point(497, 54);
+			Txt_NASCIMENTO.Name = "Txt_NASCIMENTO";
+			Txt_NASCIMENTO.Size = new Size(139, 20);
+			Txt_NASCIMENTO.TabIndex = 4;
 			// 
-			// textBox5
+			// Txt_ENDERECO
 			// 
-			textBox5.Location = new Point(143, 125);
-			textBox5.Name = "textBox5";
-			textBox5.Size = new Size(308, 23);
-			textBox5.TabIndex = 11;
+			Txt_ENDERECO.Cursor = Cursors.IBeam;
+			Txt_ENDERECO.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+			Txt_ENDERECO.Location = new Point(118, 88);
+			Txt_ENDERECO.Name = "Txt_ENDERECO";
+			Txt_ENDERECO.Size = new Size(263, 20);
+			Txt_ENDERECO.TabIndex = 5;
 			// 
-			// textBox6
+			// Txt_CEP
 			// 
-			textBox6.Location = new Point(487, 125);
-			textBox6.Name = "textBox6";
-			textBox6.Size = new Size(107, 23);
-			textBox6.TabIndex = 12;
+			Txt_CEP.Cursor = Cursors.IBeam;
+			Txt_CEP.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+			Txt_CEP.Location = new Point(409, 88);
+			Txt_CEP.Name = "Txt_CEP";
+			Txt_CEP.Size = new Size(123, 20);
+			Txt_CEP.TabIndex = 66;
 			// 
-			// textBox7
+			// Txt_FONE
 			// 
-			textBox7.Location = new Point(119, 180);
-			textBox7.Name = "textBox7";
-			textBox7.Size = new Size(141, 23);
-			textBox7.TabIndex = 13;
+			Txt_FONE.Cursor = Cursors.IBeam;
+			Txt_FONE.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+			Txt_FONE.Location = new Point(92, 131);
+			Txt_FONE.Name = "Txt_FONE";
+			Txt_FONE.Size = new Size(146, 20);
+			Txt_FONE.TabIndex = 6;
 			// 
-			// textBox8
+			// Txt_EMAIL
 			// 
-			textBox8.Location = new Point(374, 180);
-			textBox8.Name = "textBox8";
-			textBox8.Size = new Size(363, 23);
-			textBox8.TabIndex = 14;
+			Txt_EMAIL.Cursor = Cursors.IBeam;
+			Txt_EMAIL.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+			Txt_EMAIL.Location = new Point(324, 131);
+			Txt_EMAIL.Name = "Txt_EMAIL";
+			Txt_EMAIL.Size = new Size(312, 20);
+			Txt_EMAIL.TabIndex = 7;
 			// 
-			// dataGridView1
+			// DGV_ListaClientes
 			// 
-			dataGridView1.BackgroundColor = SystemColors.ActiveCaption;
-			dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			dataGridView1.Location = new Point(73, 236);
-			dataGridView1.Name = "dataGridView1";
-			dataGridView1.Size = new Size(644, 125);
-			dataGridView1.TabIndex = 15;
+			DGV_ListaClientes.BackgroundColor = SystemColors.ActiveCaption;
+			DGV_ListaClientes.BorderStyle = BorderStyle.Fixed3D;
+			DGV_ListaClientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			DGV_ListaClientes.EditMode = DataGridViewEditMode.EditProgrammatically;
+			DGV_ListaClientes.GridColor = SystemColors.InactiveCaptionText;
+			DGV_ListaClientes.ImeMode = ImeMode.NoControl;
+			DGV_ListaClientes.Location = new Point(56, 166);
+			DGV_ListaClientes.Name = "DGV_ListaClientes";
+			DGV_ListaClientes.ReadOnly = true;
+			DGV_ListaClientes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+			DGV_ListaClientes.Size = new Size(579, 150);
+			DGV_ListaClientes.TabIndex = 8;
 			// 
 			// ButtonClick
 			// 
 			ButtonClick.BackColor = SystemColors.ActiveCaptionText;
-			ButtonClick.ForeColor = SystemColors.HighlightText;
-			ButtonClick.Location = new Point(621, 119);
+			ButtonClick.ForeColor = SystemColors.ControlLightLight;
+			ButtonClick.Location = new Point(538, 81);
 			ButtonClick.Name = "ButtonClick";
-			ButtonClick.Size = new Size(94, 33);
-			ButtonClick.TabIndex = 16;
+			ButtonClick.Size = new Size(98, 32);
+			ButtonClick.TabIndex = 65;
 			ButtonClick.Text = "Buscar";
 			ButtonClick.UseVisualStyleBackColor = false;
 			// 
-			// button1
+			// Btn_INSERIR
 			// 
-			button1.BackColor = SystemColors.ActiveCaptionText;
-			button1.ForeColor = SystemColors.HighlightText;
-			button1.Location = new Point(54, 381);
-			button1.Name = "button1";
-			button1.Size = new Size(102, 42);
-			button1.TabIndex = 17;
-			button1.Text = "INSERIR";
-			button1.UseVisualStyleBackColor = false;
+			Btn_INSERIR.BackColor = SystemColors.ActiveCaptionText;
+			Btn_INSERIR.ForeColor = SystemColors.HighlightText;
+			Btn_INSERIR.Location = new Point(46, 330);
+			Btn_INSERIR.Name = "Btn_INSERIR";
+			Btn_INSERIR.Size = new Size(87, 36);
+			Btn_INSERIR.TabIndex = 17;
+			Btn_INSERIR.Text = "INSERIR";
+			Btn_INSERIR.UseVisualStyleBackColor = false;
 			// 
 			// button2
 			// 
 			button2.BackColor = SystemColors.ActiveCaptionText;
 			button2.ForeColor = SystemColors.HighlightText;
-			button2.Location = new Point(643, 381);
+			button2.Location = new Point(551, 330);
 			button2.Name = "button2";
-			button2.Size = new Size(94, 42);
+			button2.Size = new Size(81, 36);
 			button2.TabIndex = 18;
 			button2.Text = "EXCLUIR";
 			button2.UseVisualStyleBackColor = false;
@@ -217,32 +244,32 @@
 			// 
 			button3.BackColor = SystemColors.ActiveCaptionText;
 			button3.ForeColor = SystemColors.HighlightText;
-			button3.Location = new Point(188, 381);
+			button3.Location = new Point(161, 330);
 			button3.Name = "button3";
-			button3.Size = new Size(94, 42);
+			button3.Size = new Size(81, 36);
 			button3.TabIndex = 19;
 			button3.Text = "ATUALIZAR";
 			button3.UseVisualStyleBackColor = false;
 			// 
 			// Form_Clientes2
 			// 
-			AutoScaleDimensions = new SizeF(7F, 15F);
+			AutoScaleDimensions = new SizeF(6F, 13F);
 			AutoScaleMode = AutoScaleMode.Font;
 			BackColor = SystemColors.ButtonFace;
-			ClientSize = new Size(801, 450);
+			ClientSize = new Size(800, 404);
 			Controls.Add(button3);
 			Controls.Add(button2);
-			Controls.Add(button1);
+			Controls.Add(Btn_INSERIR);
 			Controls.Add(ButtonClick);
-			Controls.Add(dataGridView1);
-			Controls.Add(textBox8);
-			Controls.Add(textBox7);
-			Controls.Add(textBox6);
-			Controls.Add(textBox5);
-			Controls.Add(textBox4);
-			Controls.Add(textBox3);
-			Controls.Add(textBox2);
-			Controls.Add(textBox1);
+			Controls.Add(DGV_ListaClientes);
+			Controls.Add(Txt_EMAIL);
+			Controls.Add(Txt_FONE);
+			Controls.Add(Txt_CEP);
+			Controls.Add(Txt_ENDERECO);
+			Controls.Add(Txt_NASCIMENTO);
+			Controls.Add(Txt_RG);
+			Controls.Add(Txt_CPF);
+			Controls.Add(Txt_NOME_CLIENTES);
 			Controls.Add(label7);
 			Controls.Add(label6);
 			Controls.Add(label5);
@@ -250,10 +277,11 @@
 			Controls.Add(label3);
 			Controls.Add(label2);
 			Controls.Add(label1);
-			ImeMode = ImeMode.AlphaFull;
+			Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+			FormBorderStyle = FormBorderStyle.FixedDialog;
 			Name = "Form_Clientes2";
-			Text = "Form_Clientes2";
-			((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+			Text = "Cadastros de Clientes";
+			((System.ComponentModel.ISupportInitialize)DGV_ListaClientes).EndInit();
 			ResumeLayout(false);
 			PerformLayout();
 		}
@@ -267,17 +295,17 @@
 		private Label label5;
 		private Label label6;
 		private Label label7;
-		private TextBox textBox1;
-		private TextBox textBox2;
-		private TextBox textBox3;
-		private TextBox textBox4;
-		private TextBox textBox5;
-		private TextBox textBox6;
-		private TextBox textBox7;
-		private TextBox textBox8;
-		private DataGridView dataGridView1;
+		private TextBox Txt_NOME_CLIENTES;
+		private TextBox Txt_CPF;
+		private TextBox Txt_RG;
+		private TextBox Txt_NASCIMENTO;
+		private TextBox Txt_ENDERECO;
+		private TextBox Txt_CEP;
+		private TextBox Txt_FONE;
+		private TextBox Txt_EMAIL;
+		private DataGridView DGV_ListaClientes;
 		private Button ButtonClick;
-		private Button button1;
+		private Button Btn_INSERIR;
 		private Button button2;
 		private Button button3;
 	}
