@@ -37,7 +37,7 @@
 			// 
 			// menuStrip1
 			// 
-			menuStrip1.BackColor = Color.WhiteSmoke;
+			menuStrip1.BackColor = Color.DodgerBlue;
 			menuStrip1.Items.AddRange(new ToolStripItem[] { cADASTROToolStripMenuItem, vENDASToolStripMenuItem });
 			menuStrip1.Location = new Point(0, 0);
 			menuStrip1.Name = "menuStrip1";
@@ -51,9 +51,12 @@
 			cADASTROToolStripMenuItem.Name = "cADASTROToolStripMenuItem";
 			cADASTROToolStripMenuItem.Size = new Size(79, 20);
 			cADASTROToolStripMenuItem.Text = "CADASTRO";
+			cADASTROToolStripMenuItem.Click += cADASTROToolStripMenuItem_Click;
 			// 
 			// cLIENTEToolStripMenuItem
 			// 
+			cLIENTEToolStripMenuItem.BackColor = SystemColors.InactiveCaption;
+			cLIENTEToolStripMenuItem.ForeColor = SystemColors.ControlText;
 			cLIENTEToolStripMenuItem.Name = "cLIENTEToolStripMenuItem";
 			cLIENTEToolStripMenuItem.Size = new Size(133, 22);
 			cLIENTEToolStripMenuItem.Text = "CLIENTE";
@@ -61,31 +64,34 @@
 			// 
 			// pRODUTOSToolStripMenuItem
 			// 
+			pRODUTOSToolStripMenuItem.BackColor = SystemColors.GradientActiveCaption;
 			pRODUTOSToolStripMenuItem.Name = "pRODUTOSToolStripMenuItem";
 			pRODUTOSToolStripMenuItem.Size = new Size(133, 22);
 			pRODUTOSToolStripMenuItem.Text = "PRODUTOS";
+			pRODUTOSToolStripMenuItem.Click += pRODUTOSToolStripMenuItem_Click;
 			// 
 			// vENDASToolStripMenuItem
 			// 
 			vENDASToolStripMenuItem.Name = "vENDASToolStripMenuItem";
 			vENDASToolStripMenuItem.Size = new Size(63, 20);
 			vENDASToolStripMenuItem.Text = "VENDAS";
+			vENDASToolStripMenuItem.Click += vENDASToolStripMenuItem_Click;
 			// 
 			// Form_Principal2
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
-			BackColor = SystemColors.ButtonHighlight;
+			BackColor = SystemColors.Control;
 			BackgroundImage = Properties.Resources.Mestres_png_2_;
 			BackgroundImageLayout = ImageLayout.Stretch;
 			ClientSize = new Size(800, 450);
 			Controls.Add(menuStrip1);
-			Cursor = Cursors.Default;
 			DoubleBuffered = true;
-			ForeColor = SystemColors.ControlDarkDark;
+			ForeColor = SystemColors.ControlText;
 			MainMenuStrip = menuStrip1;
 			Name = "Form_Principal2";
-			Text = "Form1";
+			Text = "SysVendas-MDI";
+			Load += Form_Principal2_Load;
 			menuStrip1.ResumeLayout(false);
 			menuStrip1.PerformLayout();
 			ResumeLayout(false);
