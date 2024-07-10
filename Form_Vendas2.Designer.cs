@@ -32,7 +32,6 @@
             Total = new Label();
             Txt_ProdutoID = new TextBox();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            Txt_Descricao = new TextBox();
             button3 = new Button();
             dataGridView1 = new DataGridView();
             Produto = new Label();
@@ -52,6 +51,7 @@
             Txt_DescPorc = new TextBox();
             label8 = new Label();
             Txt_Produto = new TextBox();
+            Txt_Descricao = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -59,7 +59,7 @@
             // 
             button2.BackColor = Color.LightGreen;
             button2.ForeColor = SystemColors.ActiveCaptionText;
-            button2.Location = new Point(575, 77);
+            button2.Location = new Point(140, 135);
             button2.Name = "button2";
             button2.Size = new Size(80, 30);
             button2.TabIndex = 1;
@@ -82,13 +82,7 @@
             Txt_ProdutoID.Name = "Txt_ProdutoID";
             Txt_ProdutoID.Size = new Size(151, 23);
             Txt_ProdutoID.TabIndex = 12;
-            // 
-            // Txt_Descricao
-            // 
-            Txt_Descricao.Location = new Point(43, 137);
-            Txt_Descricao.Name = "Txt_Descricao";
-            Txt_Descricao.Size = new Size(341, 23);
-            Txt_Descricao.TabIndex = 15;
+            Txt_ProdutoID.KeyPress += Txt_ProdutoID_KeyPress;
             // 
             // button3
             // 
@@ -122,11 +116,12 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(40, 119);
+            label1.Location = new Point(496, 64);
             label1.Name = "label1";
-            label1.Size = new Size(61, 15);
+            label1.Size = new Size(113, 15);
             label1.TabIndex = 19;
-            label1.Text = "Descrição:";
+            label1.Text = "Unidade de medida:";
+            label1.Click += label1_Click;
             // 
             // label2
             // 
@@ -140,7 +135,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(398, 64);
+            label3.Location = new Point(43, 122);
             label3.Name = "label3";
             label3.Size = new Size(72, 15);
             label3.TabIndex = 21;
@@ -148,7 +143,7 @@
             // 
             // Txt_Qtd
             // 
-            Txt_Qtd.Location = new Point(398, 82);
+            Txt_Qtd.Location = new Point(43, 140);
             Txt_Qtd.Name = "Txt_Qtd";
             Txt_Qtd.Size = new Size(72, 23);
             Txt_Qtd.TabIndex = 22;
@@ -171,8 +166,9 @@
             // 
             // Txt_ValorUnit
             // 
-            Txt_ValorUnit.Location = new Point(482, 82);
+            Txt_ValorUnit.Location = new Point(412, 82);
             Txt_ValorUnit.Name = "Txt_ValorUnit";
+            Txt_ValorUnit.ReadOnly = true;
             Txt_ValorUnit.Size = new Size(64, 23);
             Txt_ValorUnit.TabIndex = 26;
             // 
@@ -180,6 +176,7 @@
             // 
             Txt_Troco.Location = new Point(246, 190);
             Txt_Troco.Name = "Txt_Troco";
+            Txt_Troco.ReadOnly = true;
             Txt_Troco.Size = new Size(64, 23);
             Txt_Troco.TabIndex = 27;
             // 
@@ -187,13 +184,14 @@
             // 
             Txt_Total.Location = new Point(537, 286);
             Txt_Total.Name = "Txt_Total";
+            Txt_Total.ReadOnly = true;
             Txt_Total.Size = new Size(118, 23);
             Txt_Total.TabIndex = 28;
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(482, 66);
+            label6.Location = new Point(415, 64);
             label6.Name = "label6";
             label6.Size = new Size(61, 15);
             label6.TabIndex = 29;
@@ -244,8 +242,18 @@
             // 
             Txt_Produto.Location = new Point(43, 82);
             Txt_Produto.Name = "Txt_Produto";
+            Txt_Produto.ReadOnly = true;
             Txt_Produto.Size = new Size(341, 23);
             Txt_Produto.TabIndex = 35;
+            // 
+            // Txt_Descricao
+            // 
+            Txt_Descricao.Location = new Point(496, 82);
+            Txt_Descricao.Name = "Txt_Descricao";
+            Txt_Descricao.ReadOnly = true;
+            Txt_Descricao.Size = new Size(110, 23);
+            Txt_Descricao.TabIndex = 15;
+            Txt_Descricao.TextChanged += Txt_Descricao_TextChanged;
             // 
             // Form_Vendas2
             // 
@@ -288,7 +296,6 @@
         private Label Total;
         private TextBox Txt_ProdutoID;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private TextBox Txt_Descricao;
         private Button button3;
         private DataGridView dataGridView1;
         private Label Produto;
@@ -308,5 +315,6 @@
         private TextBox Txt_DescPorc;
         private Label label8;
         private TextBox Txt_Produto;
+        private TextBox Txt_Descricao;
     }
 }
