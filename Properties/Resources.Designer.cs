@@ -59,5 +59,15 @@ namespace SysVenda_MDI.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap anime_natural_light_landscape_forest_studio_ghibli_hd_wallpaper_preview {
+            get {
+                object obj = ResourceManager.GetObject("anime-natural-light-landscape-forest-studio-ghibli-hd-wallpaper-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

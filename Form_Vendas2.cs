@@ -16,5 +16,30 @@ namespace SysVenda_MDI
 		{
 			InitializeComponent();
 		}
+
+		private void label1_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void label2_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void label3_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void Form_Vendas2_Load(object sender, EventArgs e)
+		{
+
+		}
+
+		private void label5_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 }
