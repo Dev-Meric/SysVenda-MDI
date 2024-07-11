@@ -35,7 +35,7 @@ namespace SysVenda_MDI
                 if (usuario.Senha == TxtSenha.Text)
                 {
                     MessageBox.Show("Acesso liberado");
-                    Form formMain = new Form();
+                    Form formMain = new Form_Principal2();
                     formMain.Show();
                     this.Hide();
                 }
