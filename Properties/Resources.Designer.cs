@@ -63,6 +63,16 @@ namespace SysVenda_MDI.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_Tela__49_ {
+            get {
+                object obj = ResourceManager.GetObject("Captura de Tela (49)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap images__2_ {
             get {
                 object obj = ResourceManager.GetObject("images (2)", resourceCulture);
@@ -76,6 +86,26 @@ namespace SysVenda_MDI.Properties {
         internal static System.Drawing.Bitmap tecnologia_inteligente_trabalho_humanizado {
             get {
                 object obj = ResourceManager.GetObject("tecnologia-inteligente-trabalho-humanizado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap thumbnail_1000111963 {
+            get {
+                object obj = ResourceManager.GetObject("thumbnail_1000111963", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap thumbnail_Picsart_24_07_11_20_50_45_048 {
+            get {
+                object obj = ResourceManager.GetObject("thumbnail_Picsart_24-07-11_20-50-45-048", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
