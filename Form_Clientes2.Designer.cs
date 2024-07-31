@@ -26,8 +26,7 @@
 		/// Required method for Designer support - do not modify
 		/// the contents of this method with the code editor.
 		/// </summary>
-		private void InitializeComponent()
-		{
+		private void InitializeComponent() {
 			label1 = new Label();
 			label2 = new Label();
 			label3 = new Label();
@@ -190,6 +189,7 @@
 			ButtonClick.TabIndex = 16;
 			ButtonClick.Text = "Buscar";
 			ButtonClick.UseVisualStyleBackColor = false;
+			ButtonClick.Click += ButtonClick_Click;
 			// 
 			// button1
 			// 
@@ -212,6 +212,7 @@
 			button2.TabIndex = 18;
 			button2.Text = "EXCLUIR";
 			button2.UseVisualStyleBackColor = false;
+			button2.Click += button2_Click;
 			// 
 			// button3
 			// 
@@ -223,6 +224,7 @@
 			button3.TabIndex = 19;
 			button3.Text = "ATUALIZAR";
 			button3.UseVisualStyleBackColor = false;
+			button3.Click += button3_Click;
 			// 
 			// Form_Clientes2
 			// 
