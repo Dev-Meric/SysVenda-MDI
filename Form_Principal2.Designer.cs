@@ -26,13 +26,13 @@
 		///  Required method for Designer support - do not modify
 		///  the contents of this method with the code editor.
 		/// </summary>
-		private void InitializeComponent()
-		{
+		private void InitializeComponent() {
 			menuStrip1 = new MenuStrip();
 			cADASTROToolStripMenuItem = new ToolStripMenuItem();
 			cLIENTEToolStripMenuItem = new ToolStripMenuItem();
 			pRODUTOSToolStripMenuItem = new ToolStripMenuItem();
 			vENDASToolStripMenuItem = new ToolStripMenuItem();
+			uSUARIOToolStripMenuItem = new ToolStripMenuItem();
 			menuStrip1.SuspendLayout();
 			SuspendLayout();
 			// 
@@ -47,7 +47,7 @@
 			// 
 			// cADASTROToolStripMenuItem
 			// 
-			cADASTROToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { cLIENTEToolStripMenuItem, pRODUTOSToolStripMenuItem });
+			cADASTROToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { cLIENTEToolStripMenuItem, pRODUTOSToolStripMenuItem, uSUARIOToolStripMenuItem });
 			cADASTROToolStripMenuItem.Name = "cADASTROToolStripMenuItem";
 			cADASTROToolStripMenuItem.Size = new Size(79, 20);
 			cADASTROToolStripMenuItem.Text = "CADASTRO";
@@ -71,6 +71,12 @@
 			vENDASToolStripMenuItem.Size = new Size(63, 20);
 			vENDASToolStripMenuItem.Text = "VENDAS";
 			// 
+			// uSUARIOToolStripMenuItem
+			// 
+			uSUARIOToolStripMenuItem.Name = "uSUARIOToolStripMenuItem";
+			uSUARIOToolStripMenuItem.Size = new Size(180, 22);
+			uSUARIOToolStripMenuItem.Text = "USUÁRIO";
+			// 
 			// Form_Principal2
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
@@ -93,5 +99,6 @@
 		private ToolStripMenuItem cLIENTEToolStripMenuItem;
 		private ToolStripMenuItem pRODUTOSToolStripMenuItem;
 		private ToolStripMenuItem vENDASToolStripMenuItem;
+		private ToolStripMenuItem uSUARIOToolStripMenuItem;
 	}
 }
