@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using SysVendas2;
+using SysVenda_MDI;
 
 #nullable disable
 
@@ -22,64 +22,7 @@ namespace SysVenda_MDI.Migrations
 
             MySqlModelBuilderExtensions.AutoIncrementColumns(modelBuilder);
 
-            modelBuilder.Entity("SysVenda_MDI.Entidades.ItemVenda", b =>
-                {
-                    b.Property<int>("ItemVendaId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("ItemVendaId"));
-
-                    b.Property<int>("ProdutoId")
-                        .HasColumnType("int");
-
-                    b.Property<decimal>("Quantidade")
-                        .HasColumnType("decimal(65,30)");
-
-                    b.Property<decimal>("ValorUnitario")
-                        .HasColumnType("decimal(65,30)");
-
-                    b.Property<int>("VendaId")
-                        .HasColumnType("int");
-
-                    b.HasKey("ItemVendaId");
-
-                    b.HasIndex("ProdutoId");
-
-                    b.HasIndex("VendaId");
-
-                    b.ToTable("ItensVendas");
-                });
-
-            modelBuilder.Entity("SysVenda_MDI.Entidades.Usuario", b =>
-                {
-                    b.Property<int>("UsuarioId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("UsuarioId"));
-
-                    b.Property<string>("Login")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("Nome")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<int>("Perfil")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Senha")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.HasKey("UsuarioId");
-
-                    b.ToTable("Usuarios");
-                });
-
-            modelBuilder.Entity("SysVendas2.Cliente", b =>
+            modelBuilder.Entity("SysVenda_MDI.Cliente", b =>
                 {
                     b.Property<int>("ClienteID")
                         .ValueGeneratedOnAdd()
@@ -119,7 +62,36 @@ namespace SysVenda_MDI.Migrations
                     b.ToTable("Clientes");
                 });
 
-            modelBuilder.Entity("SysVendas2.Entidades.Produto", b =>
+            modelBuilder.Entity("SysVenda_MDI.Entidades.ItemVenda", b =>
+                {
+                    b.Property<int>("ItemVendaId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("ItemVendaId"));
+
+                    b.Property<int>("ProdutoId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("Quantidade")
+                        .HasColumnType("decimal(65,30)");
+
+                    b.Property<decimal>("ValorUnitario")
+                        .HasColumnType("decimal(65,30)");
+
+                    b.Property<int>("VendaId")
+                        .HasColumnType("int");
+
+                    b.HasKey("ItemVendaId");
+
+                    b.HasIndex("ProdutoId");
+
+                    b.HasIndex("VendaId");
+
+                    b.ToTable("ItensVendas");
+                });
+
+            modelBuilder.Entity("SysVenda_MDI.Entidades.Produto", b =>
                 {
                     b.Property<int>("ProdutoID")
                         .ValueGeneratedOnAdd()
@@ -143,7 +115,35 @@ namespace SysVenda_MDI.Migrations
                     b.ToTable("Produtos");
                 });
 
-            modelBuilder.Entity("SysVendas2.Entidades.Venda", b =>
+            modelBuilder.Entity("SysVenda_MDI.Entidades.Usuario", b =>
+                {
+                    b.Property<int>("UsuarioId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("UsuarioId"));
+
+                    b.Property<string>("Login")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("Perfil")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Senha")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("UsuarioId");
+
+                    b.ToTable("Usuarios");
+                });
+
+            modelBuilder.Entity("SysVenda_MDI.Entidades.Venda", b =>
                 {
                     b.Property<int>("VendaID")
                         .ValueGeneratedOnAdd()
@@ -160,30 +160,25 @@ namespace SysVenda_MDI.Migrations
                     b.Property<DateTime>("DataVenda")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<int>("ProdutoID")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Quantidade")
-                        .HasColumnType("int");
+                    b.Property<decimal>("ValorTotal")
+                        .HasColumnType("decimal(65,30)");
 
                     b.HasKey("VendaID");
 
                     b.HasIndex("ClienteID");
-
-                    b.HasIndex("ProdutoID");
 
                     b.ToTable("Vendas");
                 });
 
             modelBuilder.Entity("SysVenda_MDI.Entidades.ItemVenda", b =>
                 {
-                    b.HasOne("SysVendas2.Entidades.Produto", "Produto")
+                    b.HasOne("SysVenda_MDI.Entidades.Produto", "Produto")
                         .WithMany()
                         .HasForeignKey("ProdutoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("SysVendas2.Entidades.Venda", "Venda")
+                    b.HasOne("SysVenda_MDI.Entidades.Venda", "Venda")
                         .WithMany()
                         .HasForeignKey("VendaId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -194,23 +189,15 @@ namespace SysVenda_MDI.Migrations
                     b.Navigation("Venda");
                 });
 
-            modelBuilder.Entity("SysVendas2.Entidades.Venda", b =>
+            modelBuilder.Entity("SysVenda_MDI.Entidades.Venda", b =>
                 {
-                    b.HasOne("SysVendas2.Cliente", "Cliente")
+                    b.HasOne("SysVenda_MDI.Cliente", "Cliente")
                         .WithMany()
                         .HasForeignKey("ClienteID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("SysVendas2.Entidades.Produto", "Produto")
-                        .WithMany()
-                        .HasForeignKey("ProdutoID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.Navigation("Cliente");
-
-                    b.Navigation("Produto");
                 });
 #pragma warning restore 612, 618
         }

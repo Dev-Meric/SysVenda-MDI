@@ -33,7 +33,7 @@
             Txt_ProdutoID = new TextBox();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             button3 = new Button();
-            dataGridView1 = new DataGridView();
+            Dgv_ItemVenda = new DataGridView();
             Produto = new Label();
             label1 = new Label();
             label2 = new Label();
@@ -45,21 +45,22 @@
             Txt_Troco = new TextBox();
             Txt_Total = new TextBox();
             label6 = new Label();
-            label5 = new Label();
-            label7 = new Label();
-            Txt_DescReais = new TextBox();
-            Txt_DescPorc = new TextBox();
             label8 = new Label();
             Txt_Produto = new TextBox();
-            Txt_Descricao = new TextBox();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            Txt_UnidadeMed = new TextBox();
+            Txt_Subtotal = new TextBox();
+            label9 = new Label();
+            label5 = new Label();
+            Txt_ValorPago = new TextBox();
+            Txt_ClienteID = new TextBox();
+            ((System.ComponentModel.ISupportInitialize)Dgv_ItemVenda).BeginInit();
             SuspendLayout();
             // 
             // button2
             // 
             button2.BackColor = Color.LightGreen;
             button2.ForeColor = SystemColors.ActiveCaptionText;
-            button2.Location = new Point(140, 135);
+            button2.Location = new Point(230, 135);
             button2.Name = "button2";
             button2.Size = new Size(80, 30);
             button2.TabIndex = 1;
@@ -70,11 +71,11 @@
             // Total
             // 
             Total.AutoSize = true;
-            Total.Location = new Point(537, 258);
+            Total.Location = new Point(537, 268);
             Total.Name = "Total";
-            Total.Size = new Size(35, 15);
+            Total.Size = new Size(63, 15);
             Total.TabIndex = 3;
-            Total.Text = "Total:";
+            Total.Text = "Valor total:";
             // 
             // Txt_ProdutoID
             // 
@@ -88,7 +89,7 @@
             // 
             button3.BackColor = Color.LightGreen;
             button3.ForeColor = SystemColors.ActiveCaptionText;
-            button3.Location = new Point(537, 360);
+            button3.Location = new Point(537, 464);
             button3.Name = "button3";
             button3.Size = new Size(127, 43);
             button3.TabIndex = 16;
@@ -96,13 +97,13 @@
             button3.UseVisualStyleBackColor = false;
             button3.Click += Btn_FINALIZAR_Click;
             // 
-            // dataGridView1
+            // Dgv_ItemVenda
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(43, 230);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(458, 193);
-            dataGridView1.TabIndex = 17;
+            Dgv_ItemVenda.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            Dgv_ItemVenda.Location = new Point(43, 314);
+            Dgv_ItemVenda.Name = "Dgv_ItemVenda";
+            Dgv_ItemVenda.Size = new Size(458, 193);
+            Dgv_ItemVenda.TabIndex = 17;
             // 
             // Produto
             // 
@@ -116,7 +117,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(496, 64);
+            label1.Location = new Point(499, 90);
             label1.Name = "label1";
             label1.Size = new Size(113, 15);
             label1.TabIndex = 19;
@@ -126,7 +127,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(246, 172);
+            label2.Location = new Point(537, 387);
             label2.Name = "label2";
             label2.Size = new Size(39, 15);
             label2.TabIndex = 20;
@@ -143,10 +144,11 @@
             // 
             // Txt_Qtd
             // 
-            Txt_Qtd.Location = new Point(43, 140);
+            Txt_Qtd.Location = new Point(43, 142);
             Txt_Qtd.Name = "Txt_Qtd";
             Txt_Qtd.Size = new Size(72, 23);
             Txt_Qtd.TabIndex = 22;
+            Txt_Qtd.TextChanged += Txt_Qtd_TextChanged;
             // 
             // label4
             // 
@@ -159,26 +161,30 @@
             // 
             // Txt_Cliente
             // 
+            Txt_Cliente.Enabled = false;
             Txt_Cliente.Location = new Point(423, 27);
             Txt_Cliente.Name = "Txt_Cliente";
             Txt_Cliente.Size = new Size(232, 23);
             Txt_Cliente.TabIndex = 24;
+            Txt_Cliente.TextChanged += Txt_Cliente_TextChanged;
             // 
             // Txt_ValorUnit
             // 
-            Txt_ValorUnit.Location = new Point(412, 82);
+            Txt_ValorUnit.Location = new Point(412, 114);
             Txt_ValorUnit.Name = "Txt_ValorUnit";
             Txt_ValorUnit.ReadOnly = true;
             Txt_ValorUnit.Size = new Size(64, 23);
             Txt_ValorUnit.TabIndex = 26;
+            Txt_ValorUnit.TextChanged += Txt_ValorUnit_TextChanged;
             // 
             // Txt_Troco
             // 
-            Txt_Troco.Location = new Point(246, 190);
+            Txt_Troco.Location = new Point(537, 405);
             Txt_Troco.Name = "Txt_Troco";
             Txt_Troco.ReadOnly = true;
-            Txt_Troco.Size = new Size(64, 23);
+            Txt_Troco.Size = new Size(118, 23);
             Txt_Troco.TabIndex = 27;
+            Txt_Troco.TextChanged += Txt_Toco;
             // 
             // Txt_Total
             // 
@@ -191,43 +197,11 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(415, 64);
+            label6.Location = new Point(412, 90);
             label6.Name = "label6";
             label6.Size = new Size(61, 15);
             label6.TabIndex = 29;
             label6.Text = "Valor Unit:";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(140, 172);
-            label5.Name = "label5";
-            label5.Size = new Size(54, 15);
-            label5.TabIndex = 30;
-            label5.Text = "Desc. R$:";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(43, 172);
-            label7.Name = "label7";
-            label7.Size = new Size(51, 15);
-            label7.TabIndex = 31;
-            label7.Text = "Desc. %:";
-            // 
-            // Txt_DescReais
-            // 
-            Txt_DescReais.Location = new Point(140, 190);
-            Txt_DescReais.Name = "Txt_DescReais";
-            Txt_DescReais.Size = new Size(64, 23);
-            Txt_DescReais.TabIndex = 32;
-            // 
-            // Txt_DescPorc
-            // 
-            Txt_DescPorc.Location = new Point(43, 190);
-            Txt_DescPorc.Name = "Txt_DescPorc";
-            Txt_DescPorc.Size = new Size(64, 23);
-            Txt_DescPorc.TabIndex = 33;
             // 
             // label8
             // 
@@ -245,27 +219,71 @@
             Txt_Produto.ReadOnly = true;
             Txt_Produto.Size = new Size(341, 23);
             Txt_Produto.TabIndex = 35;
+            Txt_Produto.TextChanged += Txt_Produto_TextChanged;
             // 
-            // Txt_Descricao
+            // Txt_UnidadeMed
             // 
-            Txt_Descricao.Location = new Point(496, 82);
-            Txt_Descricao.Name = "Txt_Descricao";
-            Txt_Descricao.ReadOnly = true;
-            Txt_Descricao.Size = new Size(110, 23);
-            Txt_Descricao.TabIndex = 15;
-            Txt_Descricao.TextChanged += Txt_Descricao_TextChanged;
+            Txt_UnidadeMed.Location = new Point(499, 114);
+            Txt_UnidadeMed.Name = "Txt_UnidadeMed";
+            Txt_UnidadeMed.ReadOnly = true;
+            Txt_UnidadeMed.Size = new Size(110, 23);
+            Txt_UnidadeMed.TabIndex = 15;
+            Txt_UnidadeMed.TextChanged += Txt_Descricao_TextChanged;
+            // 
+            // Txt_Subtotal
+            // 
+            Txt_Subtotal.Enabled = false;
+            Txt_Subtotal.Location = new Point(140, 140);
+            Txt_Subtotal.Name = "Txt_Subtotal";
+            Txt_Subtotal.Size = new Size(72, 23);
+            Txt_Subtotal.TabIndex = 36;
+            Txt_Subtotal.TextChanged += Txt_Subtotal_TextChanged;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(140, 122);
+            label9.Name = "label9";
+            label9.Size = new Size(58, 15);
+            label9.TabIndex = 37;
+            label9.Text = "Sub Total:";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(537, 326);
+            label5.Name = "label5";
+            label5.Size = new Size(66, 15);
+            label5.TabIndex = 38;
+            label5.Text = "Valor pago:";
+            // 
+            // Txt_ValorPago
+            // 
+            Txt_ValorPago.Location = new Point(537, 344);
+            Txt_ValorPago.Name = "Txt_ValorPago";
+            Txt_ValorPago.Size = new Size(118, 23);
+            Txt_ValorPago.TabIndex = 39;
+            Txt_ValorPago.TextChanged += Txt_ValorPago_TextChanged;
+            // 
+            // Txt_ClienteID
+            // 
+            Txt_ClienteID.Location = new Point(423, 56);
+            Txt_ClienteID.Name = "Txt_ClienteID";
+            Txt_ClienteID.Size = new Size(232, 23);
+            Txt_ClienteID.TabIndex = 40;
             // 
             // Form_Vendas2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(680, 436);
+            ClientSize = new Size(680, 530);
+            Controls.Add(Txt_ClienteID);
+            Controls.Add(Txt_ValorPago);
+            Controls.Add(label5);
+            Controls.Add(label9);
+            Controls.Add(Txt_Subtotal);
             Controls.Add(Txt_Produto);
             Controls.Add(label8);
-            Controls.Add(Txt_DescPorc);
-            Controls.Add(Txt_DescReais);
-            Controls.Add(label7);
-            Controls.Add(label5);
             Controls.Add(label6);
             Controls.Add(Txt_Total);
             Controls.Add(Txt_Troco);
@@ -277,16 +295,16 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(Produto);
-            Controls.Add(dataGridView1);
+            Controls.Add(Dgv_ItemVenda);
             Controls.Add(button3);
-            Controls.Add(Txt_Descricao);
+            Controls.Add(Txt_UnidadeMed);
             Controls.Add(Txt_ProdutoID);
             Controls.Add(Total);
             Controls.Add(button2);
             Name = "Form_Vendas2";
             Text = "Form_Vendas2";
             Load += Form_Vendas2_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Dgv_ItemVenda).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -297,7 +315,7 @@
         private TextBox Txt_ProdutoID;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private Button button3;
-        private DataGridView dataGridView1;
+        private DataGridView Dgv_ItemVenda;
         private Label Produto;
         private Label label1;
         private Label label2;
@@ -309,12 +327,13 @@
         private TextBox Txt_Troco;
         private TextBox Txt_Total;
         private Label label6;
-        private Label label5;
-        private Label label7;
-        private TextBox Txt_DescReais;
-        private TextBox Txt_DescPorc;
         private Label label8;
         private TextBox Txt_Produto;
-        private TextBox Txt_Descricao;
+        private TextBox Txt_UnidadeMed;
+        private TextBox Txt_Subtotal;
+        private Label label9;
+        private Label label5;
+        private TextBox Txt_ValorPago;
+        private TextBox Txt_ClienteID;
     }
 }
