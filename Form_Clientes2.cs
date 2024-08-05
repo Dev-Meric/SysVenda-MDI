@@ -10,16 +10,21 @@ using System.Windows.Forms;
 
 namespace SysVenda_MDI
 {
-	public partial class Form_Clientes2 : Form
-	{
-		public Form_Clientes2()
-		{
-			InitializeComponent();
-		}
+    public partial class Form_Clientes2 : Form
+    {
+        public Form_Clientes2()
+        {
+            InitializeComponent();
+        }
 
-		private void label1_Click(object sender, EventArgs e)
-		{
+        private void label1_Click(object sender, EventArgs e)
+        {
 
-		}
-	}
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
