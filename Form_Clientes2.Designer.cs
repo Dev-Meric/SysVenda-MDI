@@ -20,12 +20,9 @@
 			base.Dispose(disposing);
 		}
 
-		#region Windows Form Designer generated code
+        #region Windows Form Designer generated code
 
-		/// <summary>
-		/// Required method for Designer support - do not modify
-		/// the contents of this method with the code editor.
-		/// </summary>
+
 		private void InitializeComponent() {
 			label1 = new Label();
 			label2 = new Label();
@@ -260,9 +257,7 @@
 			PerformLayout();
 		}
 
-		#endregion
-
-		private Label label1;
+        private Label label1;
 		private Label label2;
 		private Label label3;
 		private Label label4;
@@ -282,5 +277,5 @@
 		private Button button1;
 		private Button button2;
 		private Button button3;
-	}
+    }
 }

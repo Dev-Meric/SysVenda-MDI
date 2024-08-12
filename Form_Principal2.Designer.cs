@@ -20,12 +20,9 @@
 			base.Dispose(disposing);
 		}
 
-		#region Windows Form Designer generated code
+        #region Windows Form Designer generated code
 
-		/// <summary>
-		///  Required method for Designer support - do not modify
-		///  the contents of this method with the code editor.
-		/// </summary>
+
 		private void InitializeComponent() {
 			menuStrip1 = new MenuStrip();
 			cADASTROToolStripMenuItem = new ToolStripMenuItem();
@@ -92,9 +89,7 @@
 			PerformLayout();
 		}
 
-		#endregion
-
-		private MenuStrip menuStrip1;
+        private MenuStrip menuStrip1;
 		private ToolStripMenuItem cADASTROToolStripMenuItem;
 		private ToolStripMenuItem cLIENTEToolStripMenuItem;
 		private ToolStripMenuItem pRODUTOSToolStripMenuItem;

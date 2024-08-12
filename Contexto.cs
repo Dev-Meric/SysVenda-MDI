@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SysVenda_MDI.Entidades;
-using SysVendas2.Entidades;
 
-namespace SysVendas2
+
+namespace SysVenda_MDI
 {
 	internal class Contexto : DbContext
 	{
@@ -19,7 +19,7 @@ namespace SysVendas2
 		public DbSet<ItemVenda> ItensVendas { get; set; }
 		public DbSet<Usuario> Usuarios { get; set; }
 
-		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
 			base.OnConfiguring(optionsBuilder);
 			optionsBuilder.UseMySql("server=192.168.30.169;database=sysvendas_mdi;user=admin;password=senac123#", new MySqlServerVersion(new Version(8, 0, 37)));

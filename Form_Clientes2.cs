@@ -29,6 +29,11 @@ namespace SysVenda_MDI
 
 		private void ButtonClick_Click(object sender, EventArgs e) {
 
-		}
-	}
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
